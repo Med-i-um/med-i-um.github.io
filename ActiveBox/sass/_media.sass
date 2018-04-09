@@ -1,0 +1,95 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+
+//Large: ≥992px
++media-breakpoint-down(lg)
+
+	.main-mnu
+		display: none
+
+	.top-line
+		&::before
+			width: 930px
+
+//Medium: ≥768px
++media-breakpoint-down(md)
+
+	.carousel-testimonials-item
+		.carousel-testimonials-image
+		.carousel-testimonials-content
+			blockquote
+				padding-left: 40px
+				padding-right: 40px
+				p
+					font-size: 1.625rem
+
+	.top-line
+		&::before
+			width: 690px
+
+	.carousel-testimonials-item
+		flex-direction: column
+		.carousel-testimonials-image
+			width: 100%
+			height: 400px
+		.carousel-testimonials-content
+			width: 100%
+
+	.carousel-testimonials
+		.owl-dots
+			left: 50%
+			transform: translate(-50%,0)
+
+//Small: ≥576px
++media-breakpoint-down(sm)
+
+	.top-line
+		&::before
+			width: 510px
+
+//Extra small: >0
++media-breakpoint-down(xs)
+
+	.mobile-toggle
+		margin-right: 20px
+
+	.top-line
+		&::before
+			width: 100%
+
+	h1
+		font-size: 4.0625rem
+
+
+	.team-item
+		text-align: center
+		.img-wrap
+			display: flex
+			overflow: hidden
+			justify-content: center
+
+	.location, .social-network, .about
+		margin: 30px 0 30px
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)
