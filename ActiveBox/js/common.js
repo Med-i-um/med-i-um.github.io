@@ -1,5 +1,16 @@
 $(function() {
 
+		// Mobile Navigation
+	$('.mobile-toggle').on('click', function() {
+		$(this).toggleClass('close-nav');
+		nav.toggleClass('open');
+		return false;
+	});	
+	$('.main-mnu').find('a').on('click', function() {
+		$('.mobile-toggle').toggleClass('close-nav');
+		nav.toggleClass('open');
+	});
+
 	$(window).on('scroll', function() {
 		var scroll = $(window).scrollTop();
 
@@ -34,16 +45,6 @@ $(function() {
 	  return false;
 	});
 
-		// Mobile Navigation
-	$('.mobile-toggle').on('click', function() {
-		$(this).toggleClass('close-nav');
-		nav.toggleClass('open');
-		return false;
-	});	
-	nav.find('a').on('click', function() {
-		$('.mobile-toggle').toggleClass('close-nav');
-		nav.toggleClass('open');
-	});
 
 	$('.work-item').fancybox();
 
