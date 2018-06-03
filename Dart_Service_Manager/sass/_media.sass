@@ -1,0 +1,137 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1530px
++media-breakpoint-down(lg)
+
+	.slick-active
+		.team-carousel-item-img
+			img
+				margin-right: -240px
+
+	.slick-center + .slick-active
+		.team-carousel-item-img
+			img
+				margin-left: -240px
+
+// ≥1192px
++media-breakpoint-down(md)
+
+	.customers-review-item .customers-review-item-img
+		margin-right: 30px
+
+	.slick-active
+		.team-carousel-item-img
+			img
+				margin-right: -140px
+
+	.slick-center + .slick-active
+		.team-carousel-item-img
+			img
+				margin-left: -140px
+
+// ≥868px
++media-breakpoint-down(sm)
+
+	.header-topline
+		.main-mnu
+			ul
+				padding-left: 0
+				padding-top: 30px
+
+	.services-content-text
+		img
+			margin-bottom: 20px
+
+	.main-foot
+		.logo-wrap
+			position: relative
+			.logo
+				position: absolute
+				left: 50%
+				transform: translate(-60px,0)
+				span
+					top: 2px
+		.footer-mnu
+			margin-top: 76px
+			float: none
+		.footer-references
+			text-align: center
+			margin-bottom: 46px
+		.social-buttons
+			float: none
+			text-align: center
+
+	.header-content-text p
+		margin-bottom: 40px
+
+// ≥576px
++media-breakpoint-down(xs)
+
+	.header-topline
+		padding-top: 0
+		.main-mnu
+			display: none
+			position: absolute
+			width: 100%
+			top: -45px
+			z-index: 2
+			ul
+				padding:
+					top: 0
+					right: 30px
+				li
+					line-height: 60px
+					display: block
+					a
+						padding: 0
+						background-color: $color3
+						display: block
+						border:
+							bottom: 1px solid darken($color3, 10%)
+							left: 1px solid darken($color3, 10%)
+							right: 1px solid darken($color3, 10%)
+						transition: all .3s ease
+						&:hover
+							background-color: darken($color3, 10%)
+
+
+	.contact-form
+		label
+			width: 100%
+		.forms
+			.button
+				float: left
+		.forms>input
+			width: 100%
+
+	.footer-mnu
+		ul
+			li
+				display: block
+				margin-bottom: 20px
+				&:last-child
+					margin-bottom: 0
+				a
+					padding: 0
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+	.header-topline
+		.main-mnu
+			display: block !important
+
+// ≤868px
++media-breakpoint-up(md)
+
+// ≤1192px
++media-breakpoint-up(lg)
+
+// ≤1530px
++media-breakpoint-up(xl)
