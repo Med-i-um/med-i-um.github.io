@@ -57,6 +57,9 @@ $(function() {
 		responsiveClass: true,
 	});
 
-	$('.carousel-testimonials-content').matchHeight();
+	function onResize() {
+		$('.carousel-testimonials-content').matchHeight();
+	}onResize();
+	window.onresize = function() {onResize()};
 
 });
